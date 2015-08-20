@@ -1,0 +1,55 @@
+<script type="text/javascript">
+    RED.nodes.registerType('filter', {
+        category: 'function'
+        , color: '#a6bbcf'
+        , defaults: {
+            name: { value:"" }
+          , property: { value: "payload", required:true }
+          , filter: {
+              value: ""
+              , required:true
+              , validate: function(v) {
+                try {
+                  new RegExp(v)
+                  return true;
+                }
+                catch (e) {
+                  return false;
+                }
+              }
+          }
+          , ignorecase: { value: "true" }
+        }
+        , inputs: 1
+        , outputs: 1
+        , icon: "function.png"
+        , label: function() {
+          return this.name || "filter";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="filter">
+  <div class="form-row">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-input-name" >
+  </div>
+  <div class="form-row">
+    <label for="node-input-property"><i class="icon-filter"></i> Property</label>
+    <input type="text" id="node-input-property" placeholder="payload" >
+  </div>
+  <div class="form-row">
+    <label for="node-input-filter"><i class="icon-filter"></i> Filter</label>
+    <input type="text" id="node-input-filter" >
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" id="node-input-ignorecase" > Ignore case
+    </label>
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="filter">
+  <p>A node that filters messages using the given property name and regular expression. When the regexp matches the whole message will be returned, otherwise it will be dropped.</p>
+  <p>Example: <i>\.(json|xml)$</i> matches all .json and .xml filenames </p>
+</script>

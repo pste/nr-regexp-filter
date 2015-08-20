@@ -1,0 +1,18 @@
+{
+    "name"         : "node-red-filter",
+    "version"      : "0.0.1",
+    "description"  : "Filter messages using a regexp on the given message property.",
+    "dependencies": {
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/pste/node-red-filter"
+    },
+    "keywords": [ "node-red", "filter" ],
+    "author": "Stefano Pirra",
+    "node-red"     : {
+        "nodes": {
+            "filter-filename": "filter.js"
+        }
+    }
+}
