@@ -1,5 +1,6 @@
 {
     "name"         : "node-red-filter",
+    "license"      : "MIT",
     "version"      : "0.0.1",
     "description"  : "Filter messages using a regexp on the given message property.",
     "dependencies": {
