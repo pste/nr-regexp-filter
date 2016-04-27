@@ -1,5 +1,5 @@
 {
-    "name"         : "node-red-filter",
+    "name"         : "node-red-contrib-filter-else",
     "license"      : "MIT",
     "version"      : "0.0.1",
     "description"  : "Filter messages using a regexp on the given message property.",
@@ -7,10 +7,10 @@
     },
     "repository": {
       "type": "git",
-      "url": "https://github.com/pste/node-red-filter"
+      "url": "https://github.com/Jacques44/node-red-filter.git"
     },
-    "keywords": [ "node-red", "filter" ],
-    "author": "Stefano Pirra",
+    "keywords": [ "node-red", "filter", "else" ],
+    "author": "Stefano Pirra, else by Jacques W",
     "node-red"     : {
         "nodes": {
             "filter-filename": "filter.js"

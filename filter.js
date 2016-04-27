@@ -16,7 +16,8 @@ module.exports = function(RED) {
       
       this.on('input', function(msg) {
         if (rx!=null && msg.hasOwnProperty(node.property) && rx.test(msg[node.property]))
-          node.send(msg);
+          node.send([msg]);
+        else node.send([ null, msg ]);
       });
     }
     RED.nodes.registerType("filter", filterMsg);
