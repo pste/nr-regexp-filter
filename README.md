@@ -6,3 +6,9 @@ When the regexp matches the whole message will be returned, otherwise the whole 
 
 Example: *\.(json|xml)$* matches everything that ends with .json and .xml
 
+# install
+Go to <HOME>/.node-red and launch
+
+`npm install node-red-filter`
+
+It will creates a *node_modules* folder with the needed package. Restart the server to load the new palette.
