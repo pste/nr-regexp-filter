@@ -26,7 +26,7 @@ module.exports = function(RED) {
             prop = prop[deepProperties[i]];
           }
           else {
-            node.log("node-red-contrib-filter: message dropped (property '" + node.property + "' not found)");
+            node.log("nr-regexp-filter: message dropped (property '" + node.property + "' not found)");
             prop = null;
           }
         }
@@ -36,7 +36,7 @@ module.exports = function(RED) {
         if (rx!=null && rx.test(prop))
           node.send(msg)
         else
-          node.log("node-red-contrib-filter: message dropped (not matching the '" + node.filter + "' regular expression)");
+          node.log("nr-regexp-filter: message dropped (not matching the '" + node.filter + "' regular expression)");
       })
     }
     RED.nodes.registerType("filter", filterMsg);
