@@ -1,5 +1,5 @@
 {
-    "name"         : "node-red-filter",
+    "name"         : "node-red-contrib-filter",
     "license"      : "MIT",
     "version"      : "1.0.0",
     "description"  : "Filter messages using a regexp on the given message property.",
@@ -7,7 +7,7 @@
     },
     "repository": {
       "type": "git",
-      "url": "https://github.com/pste/node-red-filter.git"
+      "url": "https://github.com/pste/node-red-contrib-filter.git"
     },
     "keywords": [ "node-red", "filter" ],
     "author": "Stefano Pirra",
